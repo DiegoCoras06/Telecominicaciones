@@ -6,3 +6,4 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 .source-link{margin-top:18px}
+.map-image img{height:auto}
