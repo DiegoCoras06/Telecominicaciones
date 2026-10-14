@@ -1,0 +1,562 @@
+{
+  "olt": {
+    "title": "OLT — Terminal de Línea Óptica",
+    "tags": "GPON · 2,488 Gbps · Central · 16K ONT",
+    "description": "La OLT (Optical Line Terminal) es el equipo activo principal de la red FTTH, situado en la central de telecomunicaciones del operador. Transmite la señal óptica descendente a 1490 nm hacia todos los usuarios conectados al segmento GPON, y recibe las señales ascendentes a 1310 nm desde cada ONT. Gestiona el acceso al medio compartido mediante TDMA, asigna ancho de banda dinámicamente (DBA) y configura remotamente cada ONT a través del protocolo OMCI.",
+    "specs": [
+      [
+        "Modelo de referencia",
+        "ZTE C600 / Huawei MA5800-X17"
+      ],
+      [
+        "Puertos GPON por placa",
+        "16 puertos SFP+ GPON Clase B+"
+      ],
+      [
+        "Capacidad máxima de ONT",
+        "16.384 ONT por chasis"
+      ],
+      [
+        "Tasa descendente",
+        "2,488 Gbps (GPON)"
+      ],
+      [
+        "Tasa ascendente",
+        "1,244 Gbps (GPON)"
+      ],
+      [
+        "Longitud de onda descendente",
+        "1490 nm (datos) + 1550 nm (vídeo RF)"
+      ],
+      [
+        "Longitud de onda ascendente",
+        "1310 nm"
+      ],
+      [
+        "Interfaz uplink",
+        "10GE / 40GE / 100GE"
+      ],
+      [
+        "Procesador",
+        "Main Processor Unit, uplink 400 Gbps"
+      ],
+      [
+        "Alimentación",
+        "-48V CC (doble fuente redundante)"
+      ],
+      [
+        "Consumo típico",
+        "≤ 1.500 W chasis completo"
+      ],
+      [
+        "Dimensiones",
+        "19\" rack, 14U de altura"
+      ],
+      [
+        "Peso",
+        "≈ 30 kg (chasis vacío)"
+      ],
+      [
+        "Rango de temperatura",
+        "-5 °C a +55 °C"
+      ],
+      [
+        "Humedad relativa",
+        "5% a 95% (sin condensación)"
+      ],
+      [
+        "Disponibilidad",
+        "99,999% (protección Tipo B)"
+      ]
+    ],
+    "features": [
+      "Asignación dinámica de ancho de banda (DBA) por T-CONT",
+      "Gestión remota de ONT vía OMCI (ITU-T G.988)",
+      "Triple-play: datos, voz (VoIP) y vídeo (IPTV / RF overlay)",
+      "Protección Tipo B: duplicación de OLT con conmutación automática",
+      "QoS jerárquico por servicio, usuario y VLAN",
+      "OAM y gestión SNMP v2c/v3 + NETCONF"
+    ],
+    "standards": [
+      "ITU-T G.984.x (GPON)",
+      "ITU-T G.988 (OMCI)",
+      "IEEE 802.3ah (EFM)"
+    ],
+    "wavelengths": [
+      {
+        "nm": "1490 nm",
+        "dir": "Descendente — datos",
+        "color": "#ff6b6b"
+      },
+      {
+        "nm": "1310 nm",
+        "dir": "Ascendente — datos",
+        "color": "#4ecdc4"
+      },
+      {
+        "nm": "1550 nm",
+        "dir": "Descendente — vídeo RF",
+        "color": "#ffe66d"
+      }
+    ],
+    "notes": "La OLT es el único componente activo del segmento de acceso óptico. Toda la infraestructura entre la OLT y la ONT es pasiva, lo que reduce costes de mantenimiento y mejora la fiabilidad del enlace. El alcance máximo típico de un segmento GPON es 20 km. El presupuesto de enlace típico disponible es 28 dB para transceptores Clase B+.",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Z9Kbap2S3ygZ6B6RYrggLL9sP6X-PYDi",
+    "pdfs": [
+      {
+        "label": "MPU Uplink 400G",
+        "url": "mpu_uplink_400mbps.pdf"
+      },
+      {
+        "label": "Capacidades ONT",
+        "url": "capacidades_onus_olt.pdf"
+      }
+    ]
+  },
+  "odf": {
+    "title": "ODF — Bastidor de Distribución Óptica",
+    "tags": "SC/APC · 288 fibras · Pasivo · Central",
+    "description": "El ODF (Optical Distribution Frame) es el bastidor de interconexión óptica que organiza las fibras entre los pigtails de salida de la OLT y los cables alimentadores que salen hacia la red exterior. Permite organizar, etiquetar y verificar cada fibra individualmente antes de su despliegue. Utiliza conectores SC/APC (Angled Physical Contact) para minimizar la reflectancia y la atenuación en las interconexiones.",
+    "specs": [
+      [
+        "Tipo",
+        "Bastidor de distribución óptica pasivo"
+      ],
+      [
+        "Capacidad de fibras",
+        "288 fibras (hasta 576 doble densidad)"
+      ],
+      [
+        "Conector",
+        "SC/APC (verde) — Return loss ≥ 60 dB"
+      ],
+      [
+        "Tipo de adaptador",
+        "SC dúplex APC/APC"
+      ],
+      [
+        "Unidades de rack",
+        "4U a 8U según capacidad"
+      ],
+      [
+        "Pérdida de inserción",
+        "≤ 0,3 dB por conector"
+      ],
+      [
+        "Return loss del conector",
+        "≥ 60 dB (APC)"
+      ],
+      [
+        "Organizador interior",
+        "Bandejas de empalme por fusión + routing"
+      ],
+      [
+        "Cubiertas",
+        "Cajón deslizante / panel basculante"
+      ],
+      [
+        "Material",
+        "Chapa de acero con recubrimiento epoxi"
+      ],
+      [
+        "Norma de flameado",
+        "IEC 60332-1 (LSZH)"
+      ]
+    ],
+    "features": [
+      "Organización modular por bandejas deslizantes",
+      "Etiquetado individual de cada puerto con código de color",
+      "Verificación accesible sin desmontar el cableado",
+      "Compatibilidad con fibra G.652D y G.657A/B",
+      "Actualizable a XGS-PON sin cambio de ODF"
+    ],
+    "standards": [
+      "IEC 61753-1",
+      "Telcordia GR-1209",
+      "ITU-T G.652D"
+    ],
+    "wavelengths": [
+      {
+        "nm": "1490 nm",
+        "dir": "Pasa sin atenuación adicional",
+        "color": "#ff6b6b"
+      },
+      {
+        "nm": "1310 nm",
+        "dir": "Pasa sin atenuación adicional",
+        "color": "#4ecdc4"
+      }
+    ],
+    "notes": "El ODF es el punto de frontera entre la infraestructura interior (central) y la red exterior. La limpieza de conectores con paño lint-free y alcohol isopropílico es crítica para cumplir las pérdidas de inserción especificadas. Un conector sucio puede agregar hasta 1 dB de pérdida adicional.",
+    "downloadUrl": "",
+    "pdfs": []
+  },
+  "feeder": {
+    "title": "Cable Alimentador — Feeder",
+    "tags": "G.652D · 288F · Monomodo · 0,25 dB/km",
+    "description": "El cable alimentador (feeder) es el segmento principal de fibra óptica que conecta la central (ODF) con el primer punto de división de la red (FOSC). Contiene un alto número de fibras en configuración de tubo holgado (loose tube) con miembro de resistencia central. Las fibras son monomodo ITU-T G.652D, optimizadas para las longitudes de onda de GPON con baja atenuación en las bandas O y C.",
+    "specs": [
+      [
+        "Tipo de construcción",
+        "Tubo holgado con miembro central FRP"
+      ],
+      [
+        "Número de fibras",
+        "288 fibras monomodo"
+      ],
+      [
+        "Tipo de fibra",
+        "ITU-T G.652D — Monomodo"
+      ],
+      [
+        "Núcleo / Revestimiento",
+        "9 / 125 µm"
+      ],
+      [
+        "Recubrimiento primario",
+        "250 µm"
+      ],
+      [
+        "Atenuación @ 1310 nm",
+        "≤ 0,35 dB/km"
+      ],
+      [
+        "Atenuación @ 1490 nm",
+        "≤ 0,25 dB/km"
+      ],
+      [
+        "Atenuación @ 1550 nm",
+        "≤ 0,20 dB/km"
+      ],
+      [
+        "Dispersión cromática @ 1310nm",
+        "≤ 3,5 ps/(nm·km)"
+      ],
+      [
+        "Cubierta exterior",
+        "PE negra, 12 mm diámetro exterior"
+      ],
+      [
+        "Rango de temperatura",
+        "-40 °C a +70 °C"
+      ],
+      [
+        "Peso aproximado",
+        "≈ 220 kg/km"
+      ],
+      [
+        "Tensión máxima de instalación",
+        "≤ 1.500 N"
+      ],
+      [
+        "Radio mínimo de curvatura",
+        "20 × diámetro (dinámico)"
+      ]
+    ],
+    "features": [
+      "Estructura loose tube con gel de bloqueo de agua",
+      "Protección contra roedores (armadura corrugada opcional)",
+      "Instalación en canalización subterránea o aérea",
+      "Identificación de fibras por código de color TIA-598"
+    ],
+    "standards": [
+      "ITU-T G.652D",
+      "IEC 60794-1-2",
+      "TIA-598-C"
+    ],
+    "wavelengths": [
+      {
+        "nm": "1490 nm",
+        "dir": "0,25 dB/km atenuación",
+        "color": "#ff6b6b"
+      },
+      {
+        "nm": "1310 nm",
+        "dir": "0,35 dB/km atenuación",
+        "color": "#4ecdc4"
+      },
+      {
+        "nm": "1550 nm",
+        "dir": "0,20 dB/km atenuación",
+        "color": "#ffe66d"
+      }
+    ],
+    "notes": "La atenuación total de un tramo alimentador se calcula como: A = atenuación_fibra × distancia + pérdidas_conectores + pérdidas_empalmes. Para un tramo típico de 5 km: A = 5 × 0,25 + 0,3 + 0,1 = 1,65 dB a 1490 nm. Este valor es fundamental para el presupuesto de enlace óptico (link budget) del segmento GPON.",
+    "downloadUrl": "",
+    "pdfs": []
+  },
+  "fosc": {
+    "title": "FOSC — Cierre de Empalme Óptico",
+    "tags": "IP67 · 144 empalmes · Exterior · Fusión",
+    "description": "El FOSC (Fiber Optic Splice Closure) es una caja de protección hermética que aloja los empalmes por fusión entre el cable alimentador y los cables de distribución. En su interior, bandejas de empalme organizan las fibras y protegen cada fusión. También puede alojar los divisores ópticos pasivos. Su sellado IP67 garantiza protección contra agua y polvo en condiciones ambientales extremas.",
+    "specs": [
+      [
+        "Tipo",
+        "Cierre tipo domo para exterior"
+      ],
+      [
+        "Capacidad de empalmes",
+        "144 empalmes por fusión"
+      ],
+      [
+        "Número de bandejas",
+        "4 a 6 bandejas de empalme"
+      ],
+      [
+        "Capacidad por bandeja",
+        "24 empalmes (fusión)"
+      ],
+      [
+        "Entradas de cable",
+        "2 a 5 puertos sellables"
+      ],
+      [
+        "Grado de protección",
+        "IP67"
+      ],
+      [
+        "Material",
+        "PC/ABS reforzado con fibra de vidrio"
+      ],
+      [
+        "Rango de temperatura",
+        "-40 °C a +65 °C"
+      ],
+      [
+        "Tipo de sellado",
+        "Heat-shrink / sellado mecánico"
+      ],
+      [
+        "Resistencia al impacto",
+        "IK08"
+      ],
+      [
+        "Peso vacío",
+        "≈ 2,5 kg"
+      ],
+      [
+        "Dimensiones típicas",
+        "280 × 160 × 120 mm"
+      ]
+    ],
+    "features": [
+      "Organizador modular con bandejas extraíbles",
+      "Empalmes de fusión protegidos con sleeves térmicos",
+      "Aloja divisor PLC en bandeja dedicada",
+      "Puertos de entrada con bloqueo de tensión",
+      "Etiquetado con marcadores retrorreflectantes"
+    ],
+    "standards": [
+      "IEC 61753-1",
+      "IP67 (IEC 60529)",
+      "IK08 (IEC 62262)"
+    ],
+    "wavelengths": [
+      {
+        "nm": "Todas",
+        "dir": "Pasivo — sin atenuación propia",
+        "color": "#86868b"
+      }
+    ],
+    "notes": "El FOSC no introduce atenuación por sí mismo. La pérdida típica de un empalme por fusión es ≤ 0,05 dB, mientras que un empalme mecánico puede alcanzar ≤ 0,2 dB. Es fundamental para la protección ambiental de los empalmes en instalaciones de exterior.",
+    "downloadUrl": "",
+    "pdfs": []
+  },
+  "splitter": {
+    "title": "Divisor Óptico PLC 1:32",
+    "tags": "PLC 1:32 · 17,2 dB · Pasivo · 1260–1650 nm",
+    "description": "El divisor PLC (Planar Lightwave Circuit) es un componente pasivo fabricado sobre sustrato de sílice que divide una señal óptica de entrada en 32 salidas iguales. Se basa en guías de onda integradas en un chip óptico, lo que garantiza una división uniforme y pérdidas estables en un ancho espectral amplio (1260–1650 nm). Es el componente clave que permite la arquitectura punto a multipunto (P2MP) de GPON.",
+    "specs": [
+      [
+        "Tipo",
+        "PLC (Planar Lightwave Circuit) pasivo"
+      ],
+      [
+        "Ratio de división",
+        "1:32 (1 entrada, 32 salidas)"
+      ],
+      [
+        "Pérdida de inserción típica",
+        "17,2 dB (teórica: 15,05 dB)"
+      ],
+      [
+        "Pérdida de inserción máxima",
+        "≤ 18,1 dB"
+      ],
+      [
+        "Uniformidad",
+        "≤ 1,5 dB entre salidas"
+      ],
+      [
+        "PDL (Polarization Dep. Loss)",
+        "≤ 0,2 dB"
+      ],
+      [
+        "Directividad",
+        "≥ 55 dB"
+      ],
+      [
+        "WDL (Wavelength Dep. Loss)",
+        "≤ 0,5 dB"
+      ],
+      [
+        "Ancho espectral",
+        "1260 nm a 1650 nm"
+      ],
+      [
+        "Temperatura de operación",
+        "-40 °C a +85 °C"
+      ],
+      [
+        "Fibra de pigtails",
+        "G.657A2 (bending-loss insensitive)"
+      ],
+      [
+        "Longitud de pigtails",
+        "1,5 m (entrada + salidas)"
+      ],
+      [
+        "Conectores",
+        "SC/APC (verde)"
+      ],
+      [
+        "Formato",
+        "PLC desnudo o cassette para FOSC"
+      ]
+    ],
+    "features": [
+      "División uniforme garantizada por tecnología PLC",
+      "Compatible con GPON, XGS-PON y NG-PON2",
+      "Sin alimentación eléctrica (completamente pasivo)",
+      "Formato cassette para instalación en bandeja de FOSC",
+      "Fibra G.657A2: tolerancia a curvas de 7,5 mm de radio"
+    ],
+    "standards": [
+      "ITU-T G.671",
+      "IEC 61753-1",
+      "Telcordia GR-1209"
+    ],
+    "wavelengths": [
+      {
+        "nm": "1260–1650 nm",
+        "dir": "Ancho espectral completo",
+        "color": "#86868b"
+      },
+      {
+        "nm": "17,2 dB",
+        "dir": "Pérdida típica 1:32",
+        "color": "#ff8c42"
+      }
+    ],
+    "notes": "La pérdida teórica de un divisor 1:32 es 10 × log₁₀(32) = 15,05 dB. La diferencia con los 17,2 dB reales se debe a las pérdidas excesivas (excess loss) del chip PLC y las fibras pigtails. Este valor consume una parte significativa del presupuesto de enlace disponible (28 dB para Clase B+), dejando un margen aproximado de 10 dB para atenuación de fibra y empalmes.",
+    "downloadUrl": "",
+    "pdfs": []
+  },
+  "ont": {
+    "title": "ONT — Terminal de Red Óptica",
+    "tags": "GPON · 4×GE + Wi-Fi · Residencial · CPE",
+    "description": "La ONT (Optical Network Terminal) es el equipo de cliente (CPE) de la red FTTH. Se instala en el hogar del abonado y convierte la señal óptica descendente (1490 nm) en señales eléctricas de datos (Ethernet), voz (POTS) y vídeo. Para el sentido ascendente, convierte la señal eléctrica del usuario en pulsos ópticos a 1310 nm que transmite en la ranura TDMA asignada por la OLT.",
+    "specs": [
+      [
+        "Tipo",
+        "ONT residencial SFU (Single Family Unit)"
+      ],
+      [
+        "Compatibilidad PON",
+        "GPON (ITU-T G.984.x) / XPON auto-detect"
+      ],
+      [
+        "Puertos GE",
+        "4 × Gigabit Ethernet (RJ45)"
+      ],
+      [
+        "Puertos POTS",
+        "1 × RJ11 (VoIP)"
+      ],
+      [
+        "Wi-Fi",
+        "802.11ac Wave 2 — 2,4 / 5 GHz"
+      ],
+      [
+        "Velocidad Wi-Fi",
+        "Hasta 1.167 Mbps (300 + 867)"
+      ],
+      [
+        "Puerto USB",
+        "1 × USB 2.0"
+      ],
+      [
+        "Transceptor PON",
+        "SFP GPON Clase B+ integrado"
+      ],
+      [
+        "Sensibilidad RX",
+        "≤ -27 dBm"
+      ],
+      [
+        "Potencia TX",
+        "+0,5 a +5 dBm"
+      ],
+      [
+        "Longitud de onda RX",
+        "1490 nm (datos) + 1550 nm (vídeo)"
+      ],
+      [
+        "Longitud de onda TX",
+        "1310 nm"
+      ],
+      [
+        "Alimentación",
+        "12V CC / 1,5A (adaptador incluido)"
+      ],
+      [
+        "Consumo típico",
+        "≤ 12 W en operación"
+      ],
+      [
+        "Dimensiones",
+        "210 × 140 × 35 mm"
+      ],
+      [
+        "Peso",
+        "≈ 0,35 kg"
+      ],
+      [
+        "Rango de temperatura",
+        "0 °C a +40 °C"
+      ]
+    ],
+    "features": [
+      "Auto-detección de tipo PON (GPON/EPON/XPON)",
+      "NAT y router integrado con servidor DHCP",
+      "Voz sobre IP con códec G.711/G.729",
+      "Firewall básico con filtrado ACL",
+      "Gestión remota vía TR-069 (CWMP) y OMCI",
+      "LEDs de estado: PON, LOS, GE, Wi-Fi, POTS, USB"
+    ],
+    "standards": [
+      "ITU-T G.984.x (GPON)",
+      "IEEE 802.11ac",
+      "BBF TR-069"
+    ],
+    "wavelengths": [
+      {
+        "nm": "1490 nm",
+        "dir": "Recibe datos",
+        "color": "#ff6b6b"
+      },
+      {
+        "nm": "1310 nm",
+        "dir": "Transmite datos",
+        "color": "#4ecdc4"
+      },
+      {
+        "nm": "1550 nm",
+        "dir": "Recibe vídeo RF",
+        "color": "#ffe66d"
+      }
+    ],
+    "notes": "La ONT debe cumplir el rango dinámico especificado en ITU-T G.984.2: sensibilidad de -27 dBm y saturación de +8 dBm. La distancia máxima entre OLT y ONT está limitada por el presupuesto de enlace (típicamente 28–30 dB para Clase B+), lo que equivale a aproximadamente 20 km con divisor 1:32 incluido.",
+    "downloadUrl": "",
+    "pdfs": []
+  }
+}
